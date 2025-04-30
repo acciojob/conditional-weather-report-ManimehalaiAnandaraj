@@ -13,10 +13,14 @@ const App = () => {
     color : weatherData.temperature  > 20 ? 'red' : 'blue'
   };
 
+  const conditionStyle = {
+    color: weatherData.conditions === "Sunny" ? 'orange' : 'gray'
+  };
+
   return (
     <div>
        <p>Temperature: <span style={textStyle}>{weatherData.temperature}</span></p>
-       <p>Conditions: <span style={textStyle}>{weatherData.conditions}</span></p>
+       <p>Conditions: <span style={conditionStyle}>{weatherData.conditions}</span></p>
     </div>
   )
 }
