@@ -1,28 +1,29 @@
-
 import React from "react";
 import './../styles/App.css';
 
 const App = () => {
 
   const weatherData = {
-    temperature : 25,
-    conditions : "Sunny"
+    temperature: 25,
+    conditions: "Sunny"
   };
 
-  const textStyle = {
-    color : weatherData.temperature  > 20 ? 'red' : 'blue'
+  // Define styles based on temperature
+  const tempStyle = {
+    color: weatherData.temperature > 20 ? 'red' : 'blue'
   };
 
+  // You can also define styles for conditions if needed
   const conditionStyle = {
     color: weatherData.conditions === "Sunny" ? 'orange' : 'gray'
   };
 
   return (
     <div>
-       <p>Temperature: <span style={textStyle}>{weatherData.temperature}</span></p>
-       <p>Conditions: <span style={conditionStyle}>{weatherData.conditions}</span></p>
+      <p>Temperature: <span style={tempStyle}>{weatherData.temperature}</span></p>
+      <p>Conditions: <span style={conditionStyle}>{weatherData.conditions}</span></p>
     </div>
   )
 }
 
-export default App
+export default App;
