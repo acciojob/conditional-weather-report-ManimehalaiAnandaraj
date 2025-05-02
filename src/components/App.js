@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <div>
-      <p>Temperature: <span style={tempStyle}>{weatherData.temperature}</span></p>
+      <p>Temperature: <span style={tempStyle}>{weatherData.temperature}°C</span></p>
       <p>Conditions: <span style={conditionStyle}>{weatherData.conditions}</span></p>
     </div>
   )
