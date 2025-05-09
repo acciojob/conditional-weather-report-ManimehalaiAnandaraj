@@ -1,7 +1,7 @@
 import React from "react";
 import './../styles/App.css';
 
-const App = () => {
+function App() {
 
   const WeatherDisplay = {
     temperature: 25,
@@ -9,19 +9,13 @@ const App = () => {
   };
 
   
-  const tempStyle = {
-    color: WeatherDisplay.temperature > 20 ? 'red' : 'blue'
-  };
-
- 
-  const conditionStyle = {
-    color: WeatherDisplay.conditions === "Sunny" ? 'orange' : 'gray'
-  };
+  const temperatureColor =  WeatherDisplay.temperature > 20 ? 'red' : 'blue'
+  
 
   return (
     <div>
-      <p>Temperature: <span style={tempStyle}>{WeatherDisplay.temperature}</span></p>
-      <p>Conditions: <span style={conditionStyle}>{WeatherDisplay.conditions}</span></p>
+      <p>Temperature: <span style={{color:temperatureColor}}>{WeatherDisplay.temperature}</span></p>
+      <p>Conditions: {WeatherDisplay.conditions}</p>
     </div>
   )
 }
